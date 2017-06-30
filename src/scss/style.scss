@@ -1,0 +1,177 @@
+@import "grid";
+@import "variables";
+
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+  list-style: none;
+  color:$gris-text;
+  font-family: $roboto;
+}
+
+.title{
+  margin:20px auto;
+  text-align: center;
+}
+
+nav.menu{
+    margin:auto;
+    text-align: center;
+    ul{
+      li{
+        display:inline-block;
+        text-transform: uppercase;
+        margin:10px;
+        font-family: $roboto;
+      }
+    }
+  }
+
+div.portada{
+  margin: auto;
+  text-align: center;
+  img{
+    width:95%;
+    height: 90vh;
+  }
+}
+
+section{
+  h2{
+    font-size: $letra*4;
+    margin:$letra*2 $letra*10;
+    font-weight: $bold;
+  }
+  p.prim{
+    margin:$letra*2 $letra*10;
+    font-size: $letra*2;
+    font-weight: $bold;
+  }
+  p.sec{
+    margin:$letra*2 $letra*10;
+    font-size: $letra*1.7;
+  }
+  p.ter{
+    margin:$letra*2 $letra*10;
+  }
+}
+
+div.blue{
+  height: 0.5vh;
+  background-color: $azul;
+  margin:auto;
+}
+
+div.sup{
+  display:flex;
+  justify-content: space-between;
+  margin:20px auto;
+  span:nth-child(1){
+    font-size: $letra*2.5;
+  }
+  span:nth-child(2){
+    text-transform: uppercase;
+    color:$azul;
+  }
+}
+
+.row{
+  text-align: center;
+}
+
+@mixin fijo($font,$num){
+  font-size: $letra*$num;
+  margin:$letra*2 $letra*10;
+  font-family: $font;
+}
+
+div.panel{
+  h4{
+    @include fijo("Roboto",2.5);
+  }
+  p.fecha{
+    @include fijo("monospace",2);
+  }
+  p{
+    @include fijo("Roboto",1.6);
+  }
+  div.image{
+
+    img{
+      width:100%;
+      margin:$letra*2 $letra*10;
+    }
+  }
+  div.skyblue{
+    background-color: $grayClaro;
+    width: 69%;
+    margin: auto;
+    position:relative;
+    p{
+      margin:$letra*2;
+      text-align: left;
+    }
+    img{
+      position: absolute;
+      top: 2rem;
+      right: 3px;
+    }
+  }
+}
+
+.blue{
+  color:$azul;
+}
+
+.lienzos{
+  width:80%;
+  margin:20px 100px;
+}
+
+div.lienzo{
+  img{
+    @extend .lienzos;
+  }
+  h4{
+    @include fijo("Roboto",2.5);
+  }
+  p{
+    @include fijo("Roboto",1.5);
+  }
+}
+
+div.lienzo2{
+  h4{
+    @include fijo("Roboto",2.3);
+    margin:20px 30px;
+  }
+  img{
+    margin:20px 30px;
+  }
+}
+
+div.medio{
+  position: relative;
+  top: -16rem;
+}
+
+div.lienzo2{
+  position: relative;
+  top: -15rem;
+  span.tip1{
+    position: relative;
+    top: -3.5rem;
+  }
+  span.tip2{
+    position: relative;
+    top: -2rem;
+    right: 6.5rem;
+  }
+}
+
+div.descrip{
+  p{
+    @include fijo("Roboto",1.8);
+  }
+}
