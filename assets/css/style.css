@@ -256,15 +256,94 @@
   margin: 20px auto;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .title {
+    display: none;
+  }
+}
+
+.row .nav-menu {
+  position: fixed;
+  width: 100%;
+  background: white;
+  height: 15vh;
+  z-index: 10;
+}
+@media (max-width: 768px) {
+  .row .nav-menu {
+    position: fixed;
+  }
+}
+
+.mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile {
+    display: block;
+    position: fixed;
+    height: 10vh;
+    background-color: white;
+    width: 100%;
+  }
+  .mobile #gooM {
+    display: block;
+    position: fixed;
+    width: 30%;
+    margin: 20px 15%;
+  }
+  .mobile #lupM {
+    position: relative;
+    top: 2rem;
+  }
+}
+
+#goo {
+  display: none;
+}
+@media (max-width: 768px) {
+  #goo {
+    display: none;
+  }
+}
+
+#lup {
+  display: none;
+}
+@media (max-width: 768px) {
+  #lup {
+    display: none;
+  }
+}
+
+.menu-rel {
+  position: relative;
+  top: -2rem;
+}
+
+.name-rel {
+  position: relative;
+  top: -0.8rem;
+}
+
+.search-rel {
+  position: relative;
+  top: -2rem;
+}
 
 nav.menu {
   margin: auto;
   text-align: center;
 }
+@media (max-width: 768px) {
+  nav.menu ul {
+    display: none;
+  }
+}
 nav.menu ul li {
   display: inline-block;
   text-transform: uppercase;
-  margin: 10px;
+  margin: 17px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -275,6 +354,17 @@ div.portada {
 div.portada img {
   width: 95%;
   height: 90vh;
+  margin-top: 7rem;
+}
+@media (max-width: 768px) {
+  div.portada img {
+    width: 100%;
+    height: 35vh;
+  }
+}
+
+.top {
+  top: 0;
 }
 
 section h2 {
@@ -282,17 +372,45 @@ section h2 {
   margin: 20px 100px;
   font-weight: 900;
 }
+@media (max-width: 768px) {
+  section h2 {
+    font-size: 18px;
+    margin: 10px;
+    font-weight: 800;
+  }
+}
 section p.prim {
   margin: 20px 100px;
   font-size: 20px;
   font-weight: 900;
 }
+@media (max-width: 768px) {
+  section p.prim {
+    font-size: 18px;
+    margin: 10px;
+    font-weight: 800;
+  }
+}
 section p.sec {
   margin: 20px 100px;
   font-size: 17px;
 }
+@media (max-width: 768px) {
+  section p.sec {
+    font-size: 16px;
+    margin: 10px;
+    font-weight: 400;
+  }
+}
 section p.ter {
   margin: 20px 100px;
+}
+@media (max-width: 768px) {
+  section p.ter {
+    font-size: 16px;
+    margin: 10px;
+    font-weight: 400;
+  }
 }
 
 div.blue {
@@ -322,16 +440,19 @@ div.panel h4 {
   font-size: 25px;
   margin: 20px 100px;
   font-family: "Roboto";
+  font-weight: 400;
 }
 div.panel p.fecha {
   font-size: 20px;
   margin: 20px 100px;
   font-family: "monospace";
+  font-weight: 400;
 }
 div.panel p {
   font-size: 16px;
   margin: 20px 100px;
   font-family: "Roboto";
+  font-weight: 400;
 }
 div.panel div.image img {
   width: 100%;
@@ -363,20 +484,23 @@ div.panel div.skyblue img {
 }
 
 div.lienzo h4 {
-  font-size: 25px;
+  font-size: 20px;
   margin: 20px 100px;
   font-family: "Roboto";
+  font-weight: 400;
 }
 div.lienzo p {
   font-size: 15px;
   margin: 20px 100px;
   font-family: "Roboto";
+  font-weight: 400;
 }
 
 div.lienzo2 h4 {
   font-size: 23px;
   margin: 20px 100px;
   font-family: "Roboto";
+  font-weight: 400;
   margin: 20px 30px;
 }
 div.lienzo2 img {
@@ -406,6 +530,50 @@ div.descrip p {
   font-size: 18px;
   margin: 20px 100px;
   font-family: "Roboto";
+  font-weight: 400;
+}
+
+div.carrusel {
+  margin: 20px 50px;
+}
+
+div.subcollec {
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+}
+
+div.imagen img {
+  float: left;
+  margin: 15px;
+  width: 30%;
+}
+
+.design, div.foot div.design, div.foot div.discover, div.foot div.connect {
+  width: 30%;
+}
+.design h4, div.foot div.design h4, div.foot div.discover h4, div.foot div.connect h4 {
+  margin-bottom: 15px;
+}
+.design p, div.foot div.design p, div.foot div.discover p, div.foot div.connect p {
+  font-size: 15px;
+}
+
+div.foot {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 100px;
+}
+div.foot div.connect div.conex {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+div.iconos {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

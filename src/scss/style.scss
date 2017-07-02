@@ -13,16 +13,86 @@
 .title{
   margin:20px auto;
   text-align: center;
+  @media (max-width:768px){
+    display:none;
+  }
+}
+
+.row .nav-menu{
+  position: fixed;
+  width: 100%;
+  background: white;
+  height: 15vh;
+  z-index:10;
+  @media (max-width:768px){
+    position: fixed;
+  }
+}
+
+.mobile{
+  display:none;
+  @media (max-width:768px){
+    display:block;
+    position:fixed;
+    height: 10vh;
+    background-color: white;
+    width:100%;
+    #gooM{
+      display:block;
+      position:fixed;
+      width:30%;
+      margin: 20px 15%;
+    }
+    #lupM{
+      position: relative;
+      top: 2rem;
+    }
+  }
+}
+
+#goo{
+  display:none;
+  @media (max-width:768px){
+    display:none;
+  }
+}
+
+#lup{
+ display:none;
+ @media (max-width:768px){
+   display:none;
+ }
+}
+
+.menu-rel{
+  position:relative;
+  top:-2rem;
+
+}
+
+.name-rel{
+  position:relative;
+  top:-0.8rem;
+
+}
+
+.search-rel{
+  position: relative;
+  top: -2rem;
+
 }
 
 nav.menu{
     margin:auto;
     text-align: center;
     ul{
+      @media (max-width:768px){
+        display:none;
+      }
       li{
         display:inline-block;
         text-transform: uppercase;
-        margin:10px;
+        margin:17px;
         font-family: $roboto;
       }
     }
@@ -34,7 +104,23 @@ div.portada{
   img{
     width:95%;
     height: 90vh;
+    margin-top: 7rem;
+    @media (max-width:768px){
+      width: 100%;
+      height: 35vh;
+    }
   }
+
+}
+
+.top{
+  top:0;
+}
+
+@mixin mobile($fuente,$marg,$negro){
+  font-size: $fuente;
+  margin:$marg;
+  font-weight: $negro;
 }
 
 section{
@@ -42,18 +128,30 @@ section{
     font-size: $letra*4;
     margin:$letra*2 $letra*10;
     font-weight: $bold;
+    @media (max-width:768px){
+    @include mobile(18px, 10px, 800);
+    }
   }
   p.prim{
     margin:$letra*2 $letra*10;
     font-size: $letra*2;
     font-weight: $bold;
+    @media (max-width:768px){
+    @include mobile(18px, 10px, 800);
+    }
   }
   p.sec{
     margin:$letra*2 $letra*10;
     font-size: $letra*1.7;
+    @media (max-width:768px){
+    @include mobile(16px, 10px, 400);
+    }
   }
   p.ter{
     margin:$letra*2 $letra*10;
+    @media (max-width:768px){
+    @include mobile(16px, 10px, 400);
+    }
   }
 }
 
@@ -80,10 +178,11 @@ div.sup{
   text-align: center;
 }
 
-@mixin fijo($font,$num){
+@mixin fijo($font,$num,$weight:400){
   font-size: $letra*$num;
   margin:$letra*2 $letra*10;
   font-family: $font;
+  font-weight: $weight;
 }
 
 div.panel{
@@ -134,7 +233,7 @@ div.lienzo{
     @extend .lienzos;
   }
   h4{
-    @include fijo("Roboto",2.5);
+    @include fijo("Roboto",2);
   }
   p{
     @include fijo("Roboto",1.5);
@@ -145,6 +244,7 @@ div.lienzo2{
   h4{
     @include fijo("Roboto",2.3);
     margin:20px 30px;
+
   }
   img{
     margin:20px 30px;
@@ -174,4 +274,58 @@ div.descrip{
   p{
     @include fijo("Roboto",1.8);
   }
+}
+
+div.carrusel{
+  margin:20px 50px;
+}
+
+div.subcollec{
+  width:100%;
+  height: 40vh;
+  overflow: hidden;
+}
+
+div.imagen{
+  img{
+    float:left;
+    margin:15px;
+    width:30%;
+  }
+}
+
+.design{
+  width:30%;
+  h4{
+    margin-bottom: $letra*1.5;
+  }
+  p{
+    font-size: $letra*1.5;
+  }
+}
+
+div.foot{
+  display:flex;
+  justify-content: space-around;
+  margin: 20px 100px;
+  div.design{
+    @extend .design;
+  }
+  div.discover{
+    @extend .design;
+  }
+  div.connect{
+    @extend .design;
+    div.conex{
+      display:flex;
+      justify-content: space-between;
+      width:50%;
+    }
+  }
+}
+
+div.iconos{
+  display:flex;
+  justify-content: space-between;
+  margin: 100px 100px;
 }
